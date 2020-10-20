@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { Routes, RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatCardModule} from '@angular/material/card';
+import { BinMapComponent } from './bin-map/bin-map.component';
 
 const routes: Routes = [
   {
@@ -19,12 +20,13 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [HomeComponent, BinMapComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     FlexLayoutModule,
-    MatCardModule
+    MatCardModule,
+    
   ]
 })
 export class BoardsModule { }
