@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "aqua-sieve": {
+      "hosting": {
+        "Seabin-Web-Application": [
+          "aqua-sieve"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "aqua-sieve"
+  }
+}

@@ -5,10 +5,14 @@ import { MaterialModule } from '../material/material-cdk.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatIconModule } from '@angular/material/icon';
 
+import { BinCardComponent } from './bin-card/bin-card.component';
+
 
 @NgModule({
   declarations: [
-    NavBarComponent
+    NavBarComponent,
+
+    BinCardComponent
   ],
   imports: [
     CommonModule,
@@ -17,7 +21,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatIconModule
   ],
   exports: [
-    NavBarComponent
+    NavBarComponent, BinCardComponent
   ]
 })
 export class SharedModule { }

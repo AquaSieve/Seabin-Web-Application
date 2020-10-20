@@ -23,7 +23,7 @@ import { SharedModule } from './shared/shared.module';
     BrowserAnimationsModule,
     MaterialModule,
     LayoutModule,
-    SharedModule
+
 
   ],
   providers: [],
