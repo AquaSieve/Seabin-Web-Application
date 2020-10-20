@@ -1,0 +1,45 @@
+.diamond {
+  height: 950px;
+  width: 100%;
+  background-color: #acd3e2;
+  opacity: 0.5;
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+.bins {
+  padding: 20px 12px;
+  width: 100%;
+}
+
+.actions {
+  padding: 10px 6px;
+}
+
+.intro {
+  padding: 36px;
+  font-size: 66px;
+  line-height: 2;
+  z-index: 10;
+  font-weight: 400;
+  background-color: rgb(67, 67, 148);
+  color: white;
+}
+
+.image {
+  z-index: 10;
+  height: 450px;
+  /* width: 500px; */
+  background-image: url("./../../../assets/images/7.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.container {
+  z-index: 0;
+  /* background-image: url(./../../../assets/images/2.jpg); */
+  background-color: rgb(248, 247, 247);
+  background-position: end;
+  background-size: cover;
+}

@@ -1,17 +1,18 @@
 <div class="container" fxlayout="row" fxLayoutAlign="space-between center">
   <div class="topic" fxLayoutAlign="center center">
-    <div class="image" fxlayout="column" ><img src="./../../../assets/images/7.png" alt="logo" height="50px"></div>
-    <div fxlayout="column"><p class="title" >Aqua Seive</p></div>
-    
+    <div class="image" fxlayout="column">
+      <img src="./../../../assets/images/7.png" alt="logo" height="50px" />
+    </div>
+    <div fxlayout="column"><p class="title">Aqua Seive</p></div>
   </div>
-  <div class="buttons" fxLayout="row" fxLayoutAlign="center center">
-    <div class="button">
+  <div class="buttons" fxLayout="row" fxLayoutAlign="center">
+    <div class="button" (click)="callScreen('Home')">
       <p class="label">Home</p>
     </div>
     <div class="button">
       <p class="label">User Subscription</p>
     </div>
-    <div class="button">
+    <div class="button" (click)="callScreen('Bin Manager')">
       <p class="label">Bin Manager</p>
     </div>
     <div class="button">

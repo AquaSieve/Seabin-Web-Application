@@ -7,11 +7,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { MapComponent } from './map/map.component';
 import { AgmCoreModule } from '@agm/core';
 
+import { BinCardComponent } from './bin-card/bin-card.component';
+
 
 @NgModule({
   declarations: [
     NavBarComponent,
-    MapComponent
+
+    BinCardComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +26,7 @@ import { AgmCoreModule } from '@agm/core';
     })
   ],
   exports: [
-    NavBarComponent
+    NavBarComponent, BinCardComponent
   ]
 })
 export class SharedModule { }
