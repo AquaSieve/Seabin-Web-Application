@@ -1,3 +1,13 @@
-<agm-map [latitude]="lat" [longitude]="lng">
-    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-</agm-map>
+<div class="container" fxFlex="100">
+  <div class="map" fxFlex="1 1 100%" #map>
+    <agm-map
+      [zoom]="18"
+      [style.width.px]="mapWidth"
+      [style.height.px]="mapHeight"
+      [latitude]="lat"
+      [longitude]="lng"
+    >
+      <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    </agm-map>
+  </div>
+</div>

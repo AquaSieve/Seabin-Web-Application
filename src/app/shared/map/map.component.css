@@ -1,3 +1,9 @@
-agm-map {
-    height: 300px;
+/* agm-map {
+  height: 300px;
+} */
+
+.container {
+  width: 600px;
+  height: 100%;
+  color: black;
 }

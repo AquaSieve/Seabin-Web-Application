@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-map',
@@ -6,9 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit {
+  @Input() mapHeight: number;
+  @Input() mapWidth: number;
 
-  lat = 51.678418;
-  lng = 7.809007;
+  lat = 7.189464;
+  lng = 79.858734;
+  zoom = 15;
 
   constructor() { }
 

@@ -37,7 +37,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [HomeComponent, BinManagerComponent, BinProfileComponent],
+  declarations: [HomeComponent, BinManagerComponent, BinProfileComponent, BinMapComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
