@@ -22,7 +22,7 @@ import { BinCardComponent } from './bin-card/bin-card.component';
     FlexLayoutModule,
     MatIconModule,
     AgmCoreModule.forRoot({
-      apiKey:'AIzaSyB8j-ipBRnWezBUReNdSkxq903ceZWurN8'
+      apiKey:'AIzaSyAnQIrbexL15BeN97xOY7nOjcQkJZfJsig'
     })
   ],
   exports: [

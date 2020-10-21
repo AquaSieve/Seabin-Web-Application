@@ -14,4 +14,3 @@ export class BinMapComponent implements OnInit {
 
 }
 
-//AIzaSyB8j-ipBRnWezBUReNdSkxq903ceZWurN8
