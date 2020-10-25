@@ -1,8 +1,19 @@
-<div class="container" fxLayout="column">
-  <div>
-    <p>Bin Tracker</p>
+<div class="container" fxLayout="row">
+  <div fxLayout="column" fxFlex="60">
+    <div>
+      <p class="title">Bin Tracker</p>
+    </div>
+    <div>
+      <app-map [mapHeight]="600" [mapWidth]="800"></app-map>
+    </div>
   </div>
-  <div>
-    <app-map [mapHeight]="600" [mapWidth]="800"></app-map>
+  <div fxLayout="column" fxFlex="40">
+    <div>
+      <p class="title">Bin Details</p>
+    </div>
+    <div class="details">
+      <p>Bin ID : {{binId}}</p>
+      <p>Status : {{binStatus}}</p>
+    </div>
   </div>
 </div>

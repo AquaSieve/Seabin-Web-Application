@@ -7,7 +7,10 @@
       [latitude]="lat"
       [longitude]="lng"
     >
-      <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+      <agm-marker *ngFor="let m of bins;let i = index"
+      [latitude]="lat" 
+      [longitude]="lng"
+      (markerClick)="clickedMarker(m,i)"></agm-marker>
     </agm-map>
   </div>
 </div>
