@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Bin } from 'src/app/models/bin.model';
+import { DataService } from '../../services/data.service'
 
 @Component({
   selector: 'app-bin-map',
@@ -7,16 +8,18 @@ import { Bin } from 'src/app/models/bin.model';
   styleUrls: ['./bin-map.component.css']
 })
 export class BinMapComponent implements OnInit {
-
-  @Input() bin:Bin;
+  @Input() selectedBin:Bin;
+  
 
   binId:string="B001";
   binStatus:any="Filled";
 
-  constructor() { }
+  constructor(private dataService:DataService) { }
 
   ngOnInit(): void {
   }
+
+
 
 }
 

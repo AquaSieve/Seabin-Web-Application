@@ -1,3 +1,5 @@
+import { Injectable } from '@angular/core';
+
 export interface IBin {
     id?: string;
     latitude?: number;
@@ -6,6 +8,7 @@ export interface IBin {
 }
 
 export class Bin implements IBin {
+
     constructor(
         public id?: string,
         public latitude?: number,
@@ -19,3 +22,4 @@ export enum Status {
     Filling, 
     Filled
 }
+

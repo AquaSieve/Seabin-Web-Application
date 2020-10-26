@@ -1,16 +1,9 @@
 <div class="container" fxFlex="100">
   <div class="map" fxFlex="1 1 100%" #map>
-    <agm-map
-      [zoom]="18"
-      [style.width.px]="mapWidth"
-      [style.height.px]="mapHeight"
-      [latitude]="lat"
-      [longitude]="lng"
-    >
-      <agm-marker *ngFor="let m of bins;let i = index"
-      [latitude]="lat" 
-      [longitude]="lng"
-      (markerClick)="clickedMarker(m,i)"></agm-marker>
+    <agm-map [zoom]="7.5" [style.width.px]="mapWidth" [style.height.px]="mapHeight" [latitude]="lat" [longitude]="lng">
+      <agm-marker *ngFor="let m of bins;let i = index" [latitude]="m.latitude" [longitude]="m.longitude"
+        (markerClick)="clickedMarker(m,i)">
+      </agm-marker>
     </agm-map>
   </div>
 </div>

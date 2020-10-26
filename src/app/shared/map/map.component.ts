@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { Bin, Status } from 'src/app/models/bin.model';
+import {DataService} from '../../services/data.service'
 
 @Component({
   selector: 'app-map',
@@ -36,13 +37,14 @@ export class MapComponent implements OnInit {
   ];
 
 
-  constructor() { }
+  constructor(private dataService : DataService) { }
 
   ngOnInit(): void {
   }
 
   clickedMarker(m:Bin, i:number) {
-  
+    console.log("clicked");
+    this.dataService.selectedBin=m;
   }
 
 }
