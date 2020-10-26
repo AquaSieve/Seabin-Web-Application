@@ -43,7 +43,7 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     FlexLayoutModule,
     MaterialModule,
-    SharedModule
+    SharedModule,
   ]
 })
 export class BoardsModule { }
