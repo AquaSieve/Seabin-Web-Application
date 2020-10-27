@@ -1,44 +1,111 @@
-.rounded-circle{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 50%;
-    border-style: solid;
-    border-width: 5px;
-    border-color:rgba(255,255,255,0.8);
+.rounded-circle {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 5px;
+  border-color: rgba(255, 255, 255, 0.8);
 }
-
 
 .center {
-    margin: 10px;
-    padding-top: 50px;
-    background-image: url("../../../assets/images/11.jpg"); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: left;
-    height: 600px;
-  }
-
-.profile{
-    font-size: 25px;
-    font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
-    border-spacing: 50px;  
-    table-layout: fixed;
-   
+  margin: 10px;
+  padding-top: 50px;
+  background-image: url("../../../assets/images/11.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: left;
+  height: 600px;
 }
 
-.prof-pic{
-    padding-top: 50px;
-    vertical-align: middle;
+.profile {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  border-spacing: 50px;
+  table-layout: fixed;
 }
 
-.cardDet{
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 20px;
-    width: 500px;
-    height: auto;
-    background-color: rgba(36, 36, 36, 0.521);
+.prof-pic {
+  padding-top: 50px;
+  vertical-align: middle;
+}
+
+.cardDet {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  width: 500px;
+  height: auto;
+  background-color: rgba(36, 36, 36, 0.521);
+}
+
+/* new css */
+.section1 {
+  height: 500px;
+  margin-right: 16px;
+  background-color: rgba(226, 226, 226, 0.993);
+  background-image: url(./../../../assets/images/3.jpg);
+  background-size: cover;
+  background-blend-mode: overlay;
+  border-radius: 6px;
+}
+
+.section2 {
+  height: 500px;
+
+  background-color: rgb(197, 197, 197);
+}
+
+.map {
+  height: 600px;
+  /* margin: 6px; */
+  background-color: rgb(230, 227, 227);
+}
+
+.map-detail {
+  padding: 16px 10px;
+  background-color: rgb(253, 253, 253);
+  margin: 6px 36px;
+  border: 1px solid grey;
+  width: 100%;
+}
+
+.container {
+  /* margin: 16px 10px; */
+  width: 100%;
+}
+
+.detail {
+  padding: 16px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.des {
+  font-size: 18px;
+}
+
+.item {
+  margin: 20px 0;
+}
+
+.h1 {
+  font-size: 72px;
+  margin-bottom: 36px;
+  color: darkblue;
+}
+
+.intro {
+  padding: 36px;
+  font-size: 66px;
+  line-height: 2;
+  z-index: 10;
+  font-weight: 400;
+  background-color: rgb(67, 67, 148);
+  color: white;
 }

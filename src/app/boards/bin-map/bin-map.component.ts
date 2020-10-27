@@ -8,15 +8,19 @@ import { DataService } from '../../services/data.service'
   styleUrls: ['./bin-map.component.css']
 })
 export class BinMapComponent implements OnInit {
-  @Input() selectedBin:Bin;
-  
+  @Input() selectedBin: Bin;
+  data: any;
 
-  binId:string="B001";
-  binStatus:any="Filled";
+  binId: string = "B001";
+  binStatus: any = "Filled";
 
-  constructor(private dataService:DataService) { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+    this.data = {
+      latitude: 7.205302,
+      longitude: 79.857459
+    };
   }
 
 

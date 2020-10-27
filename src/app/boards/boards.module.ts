@@ -10,6 +10,7 @@ import { SharedModule } from '../shared/shared.module';
 import { BinProfileComponent } from './bin-profile/bin-profile.component';
 import { BinMapComponent } from './bin-map/bin-map.component';
 
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 const routes: Routes = [
   {
@@ -44,6 +45,7 @@ const routes: Routes = [
     FlexLayoutModule,
     MaterialModule,
     SharedModule,
+    NgApexchartsModule,
   ]
 })
 export class BoardsModule { }
