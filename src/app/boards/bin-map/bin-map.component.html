@@ -1,19 +1,30 @@
+<div class="intro" fxLayout="row" fxLayoutAlign="center center">
+  <div class="wording" fxFlex="100">
+    <p>Bin Tracker</p>
+  </div>
+
+  <!-- <div class="image" fxFlex="60"></div> -->
+</div>
+
 <div class="container" fxLayout="row">
-  <div fxLayout="column" fxFlex="60">
+  <div fxLayout="column" fxFlex="68">
     <div>
-      <p class="title">Bin Tracker</p>
-    </div>
-    <div>
-      <app-map [mapHeight]="600" [mapWidth]="800" [data]="data"></app-map>
+      <app-map
+        [mapHeight]="600"
+        [mapWidth]="1000"
+        [data]="data"
+        (newItemEvent)="markerOnClick($event)"
+      ></app-map>
     </div>
   </div>
-  <div fxLayout="column" fxFlex="40">
+  <div class="detail" fxLayout="column" fxFlex="30" fxLayoutAlign="start start">
     <div>
       <p class="title">Bin Details</p>
     </div>
     <div class="details">
       <p>Bin ID : {{ binId }}</p>
       <p>Status : {{ binStatus }}</p>
+      <p *ngIf="assignee">Assignee : {{ assignee }}</p>
     </div>
   </div>
 </div>

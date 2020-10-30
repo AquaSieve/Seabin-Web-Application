@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Bin, Status } from 'src/app/models/bin.model';
 import { DataService } from '../../services/data.service'
 
@@ -11,7 +11,7 @@ export class MapComponent implements OnInit {
   @Input() mapHeight: number;
   @Input() mapWidth: number;
   @Input() data: any;
-
+  @Output() newItemEvent = new EventEmitter<any>();
   lat = 7.189464;
   lng = 79.858734;
   zoom = 15;
@@ -46,18 +46,19 @@ export class MapComponent implements OnInit {
     console.log(this.data)
     this.bins.push(
       {
-        id: "B003",
+        id: "NEG0001S",
         latitude: this.data.latitude,
         longitude: this.data.longitude,
-        status: Status.Filled
+        status: Status.Filling,
+        person: "Mr. K. G. M. S. Fernando"
       }
 
     )
   }
 
-  clickedMarker(m: Bin, i: number) {
-    console.log("clicked");
-    this.dataService.selectedBin = m;
+  clickedMarker(bin) {
+    console.log(`clicked ${JSON.stringify(bin)}`);
+    this.newItemEvent.emit(bin);
   }
 
 }

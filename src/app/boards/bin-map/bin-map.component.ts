@@ -11,9 +11,9 @@ export class BinMapComponent implements OnInit {
   @Input() selectedBin: Bin;
   data: any;
 
-  binId: string = "B001";
-  binStatus: any = "Filled";
-
+  binId: string = "No bin selected";
+  binStatus: any = "No bin selected";
+  assignee = null;
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
@@ -23,7 +23,11 @@ export class BinMapComponent implements OnInit {
     };
   }
 
-
+  markerOnClick(event) {
+    this.binId = event.id;
+    this.binStatus = (event.status == 1) ? "STILL FILLING" : "FILLED";
+    this.assignee = event.person
+  }
 
 }
 
