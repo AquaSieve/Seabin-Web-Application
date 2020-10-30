@@ -1,9 +1,10 @@
-<!-- <div *ngIf="show">
-  <img [src]="image" />
-</div> -->
-<div class="diamond"></div>
-<div class="wrapper" fxLayout="row">
-  <div class="settings" fxFlex="18"></div>
+<!-- <div class="diamond"></div> -->
+<div fxFlex="100" class="wrapper" fxLayout="row">
+  <div class="settings" fxFlex="18" fxLayout="column">
+    <div class="item first">Home</div>
+    <div class="item first">Bin Manager</div>
+    <div class="item first">About Us</div>
+  </div>
   <div class="container" fxLayout="column">
     <div class="intro" fxLayout="row" fxLayoutAlign="center center">
       <div class="wording" fxFlex="100">
@@ -13,26 +14,7 @@
       <!-- <div class="image" fxFlex="60"></div> -->
     </div>
 
-    <div class="bins" fxLayout="row wrap" fxLayoutAlign="center center">
-      <app-bin-card></app-bin-card>
-      <app-bin-card></app-bin-card>
-      <app-bin-card></app-bin-card>
-      <app-bin-card></app-bin-card>
-      <app-bin-card></app-bin-card>
-      <app-bin-card></app-bin-card>
-      <app-bin-card></app-bin-card>
-      <app-bin-card></app-bin-card>
-      <app-bin-card></app-bin-card>
-      <app-bin-card></app-bin-card>
-      <app-bin-card></app-bin-card>
-      <app-bin-card></app-bin-card>
-      <app-bin-card></app-bin-card>
-      <app-bin-card></app-bin-card>
-      <app-bin-card></app-bin-card>
-      <app-bin-card></app-bin-card>
-      <app-bin-card></app-bin-card>
-      <app-bin-card></app-bin-card>
-      <app-bin-card></app-bin-card>
+    <div class="bins" fxLayout="row wrap" fxLayoutAlign="start center">
       <app-bin-card></app-bin-card>
     </div>
   </div>

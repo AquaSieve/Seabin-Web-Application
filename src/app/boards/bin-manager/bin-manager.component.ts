@@ -10,28 +10,10 @@ import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 })
 export class BinManagerComponent implements OnInit {
 
-  private socket$: WebSocketSubject<Message>
-  image = "";
-  show = false;
 
   constructor() {
 
-    this.socket$ = new WebSocketSubject('ws://192.168.8.138:1337');
 
-    this.socket$
-      .subscribe(
-        (message: any) => {
-
-          // console.log(`messge received ${JSON.stringify(message)}`)
-
-
-          this.image = `data:image/JPEG;base64,${message.msg.img}`
-          // console.log(this.image)
-          this.show = true;
-        },
-        (err) => console.error(err),
-        () => console.warn('Completed!')
-      );
   }
   ngOnInit(): void {
 
