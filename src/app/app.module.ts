@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatVideoModule} from 'mat-video';
 
 import { LayoutModule } from './layouts/layout/layout.module';
 import { MaterialModule } from './material/material-cdk.module';
@@ -23,7 +24,7 @@ import { SharedModule } from './shared/shared.module';
     BrowserAnimationsModule,
     MaterialModule,
     LayoutModule,
-
+    MatVideoModule
 
   ],
   providers: [],

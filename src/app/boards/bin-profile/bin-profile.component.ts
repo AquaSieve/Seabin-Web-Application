@@ -3,6 +3,7 @@ import { WebSocketSubject } from 'rxjs/observable/dom/WebSocketSubject';
 import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 import { ApexAxisChartSeries, ApexChart, ApexTitleSubtitle, ApexXAxis, ApexYAxis, ChartComponent } from 'ng-apexcharts';
 
+
 export type ChartOptions = {
   series: ApexAxisChartSeries;
   chart: ApexChart;

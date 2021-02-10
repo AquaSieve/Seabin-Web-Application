@@ -24,49 +24,39 @@
 </div> -->
 
 <div fxFlex="100" class="wrapper" fxLayout="row">
-  <div class="container" fxLayout="column">
-    <div class="intro" fxLayout="row" fxLayoutAlign="center center">
-      <div class="wording" fxFlex="100">
-        <p>Bin Profile</p>
-      </div>
+    <div class="container" fxLayout="column">
+        <div class="intro" fxLayout="row" fxLayoutAlign="center center">
+            <div class="wording" fxFlex="100">
+                <p>Bin Profile</p>
+            </div>
 
-      <!-- <div class="image" fxFlex="60"></div> -->
-    </div>
+            <!-- <div class="image" fxFlex="60"></div> -->
+        </div>
 
-    <div class="bins" fxLayout="row wrap" fxLayoutAlign="start center">
-      <div class="container" fxLayout="column" fxLayoutAlign="center center">
-        <div
-          class="detail"
-          style="width: 100%"
-          fxFlex="100"
-          fxLayout="row"
-          fxLayoutAlign="center center"
-        >
-          <div
-            class="detail section1"
-            fxFlex="65"
-            fxLayout="column"
-            fxLayoutAlign="center center"
-          >
-            <!-- <h1 class="h1">Bin Profile</h1> -->
-            <div class="item" fxLayout="row" fxLayoutGap="6px">
-              <h3 class="title">Bin Tag :</h3>
-              <h3 class="des">NEG0001S</h3>
-            </div>
-            <div class="item" fxLayout="row" fxLayoutGap="6px">
-              <h3 class="title">Bin Location :</h3>
-              <h3 class="des">Hamilton bridge A1</h3>
-            </div>
-            <div class="item" fxLayout="row" fxLayoutGap="6px">
-              <h3 class="title">Bin Assignee :</h3>
-              <h3 class="des">Mr. K. G. M. S. Fernando</h3>
-            </div>
-            <div class="item" fxLayout="row" fxLayoutGap="6px">
-              <h3 class="title">Bin Status :</h3>
-              <h3 class="des">NOT FILLED</h3>
-            </div>
-          </div>
-          <div
+        <div class="bins" fxLayout="row wrap" fxLayoutAlign="start center">
+            <div class="container" fxLayout="column" fxLayoutAlign="center center">
+                <div class="detail" style="width: 100%" fxFlex="100" fxLayout="row" fxLayoutAlign="center center">
+                    <div class="detail section1" fxFlex="65" fxLayout="column" fxLayoutAlign="center center">
+                        <!-- <h1 class="h1">Bin Profile</h1> -->
+                        <div class="item" fxLayout="row" fxLayoutGap="6px">
+                            <h3 class="title">Bin Tag :</h3>
+                            <h3 class="des">NEG0001S</h3>
+                        </div>
+                        <div class="item" fxLayout="row" fxLayoutGap="6px">
+                            <h3 class="title">Bin Location :</h3>
+                            <h3 class="des">Hamilton bridge A1</h3>
+                        </div>
+                        <div class="item" fxLayout="row" fxLayoutGap="6px">
+                            <h3 class="title">Bin Assignee :</h3>
+                            <h3 class="des">Mr. K. G. M. S. Fernando</h3>
+                        </div>
+                        <div class="item" fxLayout="row" fxLayoutGap="6px">
+                            <h3 class="title">Bin Status :</h3>
+                            <h3 class="des">NOT FILLED</h3>
+                        </div>
+                    </div>
+
+                    <!-- <div
             class="live-feed section2"
             fxFlex="30"
             fxLayoutAlign="center center"
@@ -79,30 +69,24 @@
               <h1>No Feed Available</h1>
             </div>
           </div>
-        </div>
+        </div> -->
 
-        <div class="detail" fxFlex="100" fxLayout="row">
-          <div class="map">
-            <app-map [mapHeight]="600" [mapWidth]="600" [data]="data"></app-map>
-          </div>
-          <div
-            class="map-detail"
-            fxLayout="column"
-            fxLayoutAlign="center center"
-            fxFlex="60"
-          >
-            <h1>Garbage Classification Statistics</h1>
-            <apx-chart
-              [series]="chartOptions.series"
-              [chart]="chartOptions.chart"
-              [xaxis]="chartOptions.xaxis"
-              [yaxis]="chartOptions.yaxis"
-              [title]="chartOptions.title"
-              roundEdges="true"
-            ></apx-chart>
-          </div>
+                    <!-- <div fxFlex="30" fxLayoutAlign="center center" fxLayout="column">
+                        <mat-video src="https://upload.wikimedia.org/wikipedia/commons/transcoded/9/96/Curiosity%27s_Seven_Minutes_of_Terror.ogv/Curiosity%27s_Seven_Minutes_of_Terror.ogv.480p.vp9.webm">
+
+                        </mat-video>
+                    </div> -->
+
+                    <div class="detail" fxFlex="100" fxLayout="row">
+                        <div class="map">
+                            <app-map [mapHeight]="600" [mapWidth]="600" [data]="data"></app-map>
+                        </div>
+                        <div class="map-detail" fxLayout="column" fxLayoutAlign="center center" fxFlex="60">
+                            <h1>Garbage Classification Statistics</h1>
+                            <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis" [yaxis]="chartOptions.yaxis" [title]="chartOptions.title" roundEdges="true"></apx-chart>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-</div>
