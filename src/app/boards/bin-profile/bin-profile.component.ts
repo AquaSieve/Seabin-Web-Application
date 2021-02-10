@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { WebSocketSubject } from 'rxjs/observable/dom/WebSocketSubject';
 import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 import { ApexAxisChartSeries, ApexChart, ApexTitleSubtitle, ApexXAxis, ApexYAxis, ChartComponent } from 'ng-apexcharts';
+import {ClassificationService} from '../../services/classification/classification.service'
+import { stringify } from '@angular/compiler/src/util';
 
 
 export type ChartOptions = {
@@ -23,29 +25,57 @@ export class BinProfileComponent implements OnInit {
   private socket$: WebSocketSubject<Message>
   data: any;
 
+  loading:boolean=false;
+  percentageData;
+
+  categoryArr:string[]=[];
+  percentageArr:number[]=[];
+
   image = "";
   show = false;
 
-  constructor() {
-    this.socket$ = new WebSocketSubject('ws://192.168.8.138:1337');
+  constructor(private classificationService:ClassificationService) {
+    this.getPercentages();
+    // this.socket$ = new WebSocketSubject('ws://192.168.8.138:1337');
 
-    this.socket$
-      .subscribe(
-        (message: any) => {
+    // this.socket$
+    //   .subscribe(
+    //     (message: any) => {
 
-          // console.log(`messge received ${JSON.stringify(message)}`)
+    //       // console.log(`messge received ${JSON.stringify(message)}`)
 
 
-          this.image = `data:image/JPEG;base64,${message.msg.img}`
-          // console.log(this.image)
-          this.show = true;
-        },
-        (err) => console.error(err),
-        () => console.warn('Completed!')
-      );
+    //       this.image = `data:image/JPEG;base64,${message.msg.img}`
+    //       // console.log(this.image)
+    //       this.show = true;
+    //     },
+    //     (err) => console.error(err),
+    //     () => console.warn('Completed!')
+    //   );
   }
 
+  getPercentages(){
+    this.loading=true;
+    try{
+      this.classificationService.getPercentage().subscribe((res:any)=>{
+        this.loading=false;
+        console.log(res);
+        //this.percentageData = res;
+        for(var i=0;i<4;i++){
+          this.percentageArr[i]=parseFloat(res[i].percentage);
+          this.categoryArr[i]=res[i].category;
+        }
+        console.log(this.percentageArr[0]);
+        console.log(this.categoryArr[0]);
+      })
+    }catch(exception){
+      console.log("Recieved Empty List!");
+    }
+  }
+
+
   ngOnInit(): void {
+
     this.data = {
       latitude: 7.205302,
       longitude: 79.857459
@@ -57,7 +87,7 @@ export class BinProfileComponent implements OnInit {
       series: [
         {
           name: "Percentage",
-          data: [15, 50, 35]
+          data: [20,this.percentageArr[1],this.percentageArr[2],1]
         }
       ],
       chart: {
@@ -74,7 +104,7 @@ export class BinProfileComponent implements OnInit {
         title: {
           text: "Garbage Categories"
         },
-        categories: ["Plastic", "Organic", "Other"]
+        categories: ["","","",""]
       },
       yaxis: {
         title: {

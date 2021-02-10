@@ -9,6 +9,7 @@ import { MaterialModule } from '../material/material-cdk.module';
 import { SharedModule } from '../shared/shared.module';
 import { BinProfileComponent } from './bin-profile/bin-profile.component';
 import { BinMapComponent } from './bin-map/bin-map.component';
+import {HttpClientModule} from '@angular/common/http';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -46,6 +47,7 @@ const routes: Routes = [
     MaterialModule,
     SharedModule,
     NgApexchartsModule,
+    HttpClientModule
   ]
 })
 export class BoardsModule { }

@@ -1,56 +1,54 @@
 .container {
-  background-image: url(./../../../assets/images/5.jpg);
-  background-repeat: no-repeat;
-  width: 100%;
-  /* background-color: rgba(0, 0, 0, 0.226); */
-  background-blend-mode: overlay;
+    background-image: url("./../../../assets/images/5.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    /* background-color: rgba(0, 0, 0, 0.226); */
+    background-blend-mode: overlay;
 }
 
 .intro {
-  padding: 36px;
-  font-size: 60px;
-  line-height: 1.5;
-  font-family: "Calibri";
-  font-weight: 600;
-  /* text-shadow: 3px 5px 2px #b8b8b8, 2px 2px 8px rgba(212, 209, 208, 0.25); */
+    padding: 36px;
+    font-size: 60px;
+    line-height: 1.5;
+    font-family: "Calibri";
+    font-weight: 600;
+    /* text-shadow: 3px 5px 2px #b8b8b8, 2px 2px 8px rgba(212, 209, 208, 0.25); */
 }
 
 .image {
-  height: 550px;
-  /* width: 500px; */
-  background-image: url("./../../../assets/images/1.jpg");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+    height: 550px;
+    /* width: 500px; */
+    background-image: url("./../../../assets/images/1.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .product {
-  background-image: url("https://media1.giphy.com/media/cLNJ2UKfo7CKXQtWgt/giphy.gif");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: rgba(0, 0, 0, 0.349);
-  background-blend-mode: overlay;
+    background-image: url("https://media1.giphy.com/media/cLNJ2UKfo7CKXQtWgt/giphy.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.349);
+    background-blend-mode: overlay;
 }
 
 .title {
-  font-size: 68px;
-  line-height: 2;
-  text-align: center;
+    font-size: 68px;
+    line-height: 2;
+    text-align: center;
 }
 
 .card-content {
-  font-size: 25px;
-  line-height: 1.5;
-  text-align: center;
-  padding-left: 50px;
-  padding-right: 50px;
-  text-indent: 50px;
+    font-size: 25px;
+    line-height: 1.5;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-indent: 50px;
 }
 
 .mat-card {
-  color: white;
-
-  border-radius: 12px;
-  background-color: transparent;
+    color: white;
+    border-radius: 12px;
+    background-color: transparent;
 }
-

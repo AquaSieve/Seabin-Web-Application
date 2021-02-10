@@ -54,6 +54,9 @@
                             <h3 class="title">Bin Status :</h3>
                             <h3 class="des">NOT FILLED</h3>
                         </div>
+                        <div>
+
+                        </div>
                     </div>
 
                     <!-- <div
@@ -69,24 +72,21 @@
               <h1>No Feed Available</h1>
             </div>
           </div>
-        </div> -->
-
-                    <!-- <div fxFlex="30" fxLayoutAlign="center center" fxLayout="column">
-                        <mat-video src="https://upload.wikimedia.org/wikipedia/commons/transcoded/9/96/Curiosity%27s_Seven_Minutes_of_Terror.ogv/Curiosity%27s_Seven_Minutes_of_Terror.ogv.480p.vp9.webm">
-
-                        </mat-video>
-                    </div> -->
-
-                    <div class="detail" fxFlex="100" fxLayout="row">
-                        <div class="map">
-                            <app-map [mapHeight]="600" [mapWidth]="600" [data]="data"></app-map>
-                        </div>
-                        <div class="map-detail" fxLayout="column" fxLayoutAlign="center center" fxFlex="60">
-                            <h1>Garbage Classification Statistics</h1>
-                            <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis" [yaxis]="chartOptions.yaxis" [title]="chartOptions.title" roundEdges="true"></apx-chart>
-                        </div>
+         -->
+                    <div fxFlex="30" fxLayoutAlign="center center" fxLayout="column">
+                        <iframe class="frame wrap" src="http://192.168.8.100:8080/video" name="iframe_a" height="500px" width="100%" title="Iframe Example"></iframe>
+                    </div>
+                </div>
+                <div class="detail" fxFlex="100" fxLayout="row">
+                    <div class="map">
+                        <app-map [mapHeight]="600" [mapWidth]="600" [data]="data"></app-map>
+                    </div>
+                    <div class="map-detail" fxLayout="column" fxLayoutAlign="center center" fxFlex="60">
+                        <h1>Garbage Classification Statistics</h1>
+                        <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis" [yaxis]="chartOptions.yaxis" [title]="chartOptions.title" roundEdges="true"></apx-chart>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
